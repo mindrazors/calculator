@@ -18,7 +18,7 @@ body {
     padding: 18px 5px 5px 5px;
     border-radius: 6px;
     justify-content: flex-end;
-    gap: 5px; 
+    gap: 8px; 
 }
 #display {
     background-color: lightgray;
@@ -31,4 +31,8 @@ body {
 #buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#clear {
+    text-align: center;
+    width: 100%;
 }
