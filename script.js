@@ -14,6 +14,25 @@ function divide(num1, num2) {
     return num1/num2;
 }
 
-let firstOperand;
-let secondOperand;
+let firstNum;
+let secondNum;
 let operator;
+
+function operate(firstNum, secondNum, operator) {
+    switch (operator) {
+        case '+':
+            return add(firstNum, secondNum);
+            break;
+        case '-':
+            return subtract(firstNum, secondNum);
+            break;
+        case '*':
+            return multiply(firstNum, secondNum);
+            break;
+        case '/':
+            return divide(firstNum, secondNum);
+            break;
+        default:
+            return 'ERROR';
+    }
+}
