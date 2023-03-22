@@ -37,9 +37,13 @@ function operate(firstNum, secondNum, operator) {
     }
 }
 
+//Contains references for ALL buttons
 const buttons = Array.from(document.querySelectorAll('button'));
 
-const operators = buttons.filter(checkOperator);
-function checkOperator(button) {
-    return isNaN(button.innerHTML);
-}
+//Contains references for add, subtract, multiply, divide, decimal, and equals buttons ONLY
+const operators = Array.from(document.querySelectorAll('.operator'));
+
+//Contains references for number buttons ONLY
+const operands = buttons.filter(element => {
+    return !(operators.includes(element));
+});
