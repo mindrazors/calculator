@@ -37,4 +37,9 @@ function operate(firstNum, secondNum, operator) {
     }
 }
 
-const buttons = document.querySelectorAll('button');
+const buttons = Array.from(document.querySelectorAll('button'));
+
+const operators = buttons.filter(checkOperator);
+function checkOperator(button) {
+    return isNaN(button.innerHTML);
+}
