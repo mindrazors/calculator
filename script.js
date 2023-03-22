@@ -36,3 +36,5 @@ function operate(firstNum, secondNum, operator) {
             return 'ERROR';
     }
 }
+
+const buttons = document.querySelectorAll('button');
