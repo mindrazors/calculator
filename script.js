@@ -47,3 +47,12 @@ const operators = Array.from(document.querySelectorAll('.operator'));
 const operands = buttons.filter(element => {
     return !(operators.includes(element));
 });
+for (const operand of operands) {
+    operand.addEventListener('click', function updateDisplay() {
+        let currentDisplayValue = +this.innerHTML;
+        display.textContent = currentDisplayValue;
+    });
+}
+
+//Contains reference for display div
+const display = document.querySelector('#display');
