@@ -52,22 +52,18 @@ function operate(exp) {
 //Store output value for further calculation
 //Repeat
 function getOperand() {
-    console.log(`textContent: ${this.textContent}`);
-    console.log(`type: ${typeof this.textContent}`);
     expression;
     if (expression.operator == '') {
         expression.firstOperand += this.textContent;
-        console.log(`expression.firstOperand: ${expression.firstOperand}`);
     } else {
         expression.secondOperand += this.textContent;
-        console.log(`expression.secondOperand: ${expression.secondOperand}`);;
     }
     updateDisplay();
 }
 function getOperator() {
     expression;
     // if there is a first operand present, and no second operand present, then assign an operator value to expression.operator
-    ((expression.firstOperand != '') && (expression.secondOperand == '')) ? expression.operator = this.textContent : expression.operator = '';
+    ((expression.firstOperand != '') && (expression.secondOperand == '')) ? expression.operator = this.textContent : expression.operator = expression.operator;
     updateDisplay();
 }
 function addDecimalPlace() {
