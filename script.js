@@ -45,12 +45,6 @@ function operate(exp) {
     }
 }
 
-//Get the first operand
-//Get the operator
-//Get the second number
-//Execute the expression when equals button is pressed
-//Store output value for further calculation
-//Repeat
 function getOperand() {
     expression;
     if (expression.operator == '') {
