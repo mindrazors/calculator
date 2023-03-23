@@ -108,6 +108,18 @@ function clear() {
 function attemptCalculation() {
     if (expression.firstOperand && expression.operator && expression.secondOperand) {
         let solution = `${operate(expression)}`;
+        if (Array.from(solution).includes('.')) {
+            solution = Number(solution).toFixed(5);
+            let solutionArray = Array.from(solution);
+            for (let i = solutionArray.length - 1; i >= 0; i--) {
+                if (+solutionArray[i] > 0) {
+                    break;
+                } else {
+                    solutionArray.splice(i);
+                }
+            }
+            solution = solutionArray.toString().replace(/,/g, '');
+        }
         display.textContent = solution;
         expression = {
             firstOperand: '',
