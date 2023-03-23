@@ -45,3 +45,9 @@ button {
     border-radius: 4px;
     font-size: 40px;
 }
+button.operator {
+    background-color: rgb(255, 206, 116);
+}
+#clear {
+    background-color: rgb(233, 105, 105);
+}
