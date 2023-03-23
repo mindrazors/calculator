@@ -107,7 +107,16 @@ function attemptCalculation() {
     if (expression.firstOperand && expression.operator && expression.secondOperand) {
         let solution = `${operate(expression)}`;
         display.textContent = solution;
+        expression = {
+            firstOperand: '',
+            secondOperand: '',
+            operator: '',
+            firstOperandHasDecimal: false,
+            secondOperandHasDecimal: false,
+        };
         expression.firstOperand = solution;
+    } else {
+        return;
     }
 }
 
