@@ -75,12 +75,14 @@ function addDecimalPlace() {
     if (expression.operator == '') {
         if (expression.firstOperandHasDecimal == false) {
             expression.firstOperand += '.';
+            expression.firstOperandHasDecimal = true;
         } else {
             return;
         }
     } else {
         if (expression.secondOperandHasDecimal == false) {
             expression.secondOperand += '.';
+            expression.secondOperand = true;
         } else {
             return;
         }
@@ -115,6 +117,11 @@ function attemptCalculation() {
             secondOperandHasDecimal: false,
         };
         expression.firstOperand = solution;
+        if (Array.from(expression.firstOperand).includes('.')) {
+            expression.firstOperandHasDecimal = true;
+        } else {
+            return;
+        }
     } else {
         return;
     }
