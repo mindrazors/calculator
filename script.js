@@ -82,7 +82,7 @@ function addDecimalPlace() {
     } else {
         if (expression.secondOperandHasDecimal == false) {
             expression.secondOperand += '.';
-            expression.secondOperand = true;
+            expression.secondOperandHasDecimal = true;
         } else {
             return;
         }
