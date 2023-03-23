@@ -50,7 +50,7 @@ const operands = buttons.filter(element => {
 for (const operand of operands) {
     operand.addEventListener('click', function updateDisplay() {
         let currentDisplayValue = +this.innerHTML;
-        display.textContent = currentDisplayValue;
+        display.textContent += currentDisplayValue;
     });
 }
 
